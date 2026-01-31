@@ -2,7 +2,7 @@
 Create TLE from SatNOGS observation as fast as possible. A collection of scripts
 
 ### requirements
-You should have already installed the these application and it should be working:
+You should have already installed these application and it should be working:
 - [strf](https://github.com/cbassa/strf)
 - [satnogs-waterfall-tabulation-helper](https://github.com/hobisatelit/satnogs-waterfall-tabulation-helper)
 - [ikhnos](https://gitlab.com/kerel-fs/ikhnos/)
