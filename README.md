@@ -24,7 +24,4 @@ just put this ichnos.sh file inside directory of your ikhnos
 ```
 ./ichnos.sh
 ```
-example:
-```
-./ichnos.sh 13266946
-```
+
