@@ -179,10 +179,6 @@ main() {
 	
 	#write command
 	xdotool type --delay 1000 "w"
-
-	#screenshot
-	window_id=$(xdotool search --pid $pid | head -n 1)
-	import -window "$(xdotool search --name 'PGPLOT Window 1' | head -n 1)" "$OUTPUT_DIR/strf.png"
 	
     while true; do
 		show_note2
@@ -191,10 +187,6 @@ main() {
             break 
         fi
     done
-    
-	#quit rffit
-	skill -p $pid
-	skill pgxwin_server
    
     newest_file=$(ls -t * 2>/dev/null | head -n 1)   
     
@@ -205,6 +197,15 @@ main() {
         #fi
 		mv $newest_file "$OUTPUT_DIR/$MAGIC-$newest_file"
 	fi
+    
+	#screenshot
+	window_id=$(xdotool search --pid $pid | head -n 1)
+    TLE_BASENAME="${newest_file%.*}"
+	import -window "$(xdotool search --name 'PGPLOT Window 1' | head -n 1)" "$OUTPUT_DIR/$MAGIC-$TLE_BASENAME-strf.png"
+    
+	#quit rffit
+	skill -p $pid
+	skill pgxwin_server
 		
 	echo "→ Saved in: $OUTPUT_DIR"
 	#sleep 
