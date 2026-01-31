@@ -23,7 +23,7 @@ show_help() {
 	echo "	-v. --version	version"
 	echo ""
 	echo "Example:"
-	echo "$0 13266944"
+	echo "$0 13266946"
 }
 show_note() {
 	echo "→ Note:
